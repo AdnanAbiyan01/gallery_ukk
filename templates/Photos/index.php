@@ -73,7 +73,7 @@ $this->Breadcrumbs->add([
     </div>
 
     <div class="col-12">
-`    <div class="card card-primary">
+    <div class="card card-primary">
         <div class="card-header">
             <h4 class="card-title">Galeri</h4>
         </div>
