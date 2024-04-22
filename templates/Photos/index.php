@@ -72,22 +72,31 @@ $this->Breadcrumbs->add([
         </ul>
     </div>
 
-
     <div class="col-12">
-            <div class="card card-primary">
-              <div class="card-header">
-                <h4 class="card-title">Galeri</h4>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-2">
+`    <div class="card card-primary">
+        <div class="card-header">
+            <h4 class="card-title">Galeri</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <?php foreach ($photos as $photo): ?>
+                <div class="col-md-3">
                     <a data-toggle="lightbox" data-gallery="gallery">
-                        <?= $this->Html->image('../images/'.$photo->photo, ['width' => '300']);?>
-                      <!-- <img src="https://via.placeholder.com/300/FFFFFF?text=1" class="img-fluid mb-2" alt="white sample"/> -->
+                        <?= $this->Html->image('../images/'.$photo->photo, ['class' => 'gallery-image']);?>
                     </a>
                 </div>
-              </div>
+                <?php endforeach; ?>
             </div>
-          </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .gallery-image {
+        max-width: 100%;
+        max-height: 200px; /* Atur ketinggian maksimum sesuai kebutuhan */
+        margin-bottom: 20px; /* Atur jarak antara gambar */
+    }
+</style>
     <!-- /.card-footer -->
 </div>
